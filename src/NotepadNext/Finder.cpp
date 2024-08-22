@@ -78,6 +78,7 @@ Sci_CharacterRange Finder::findPrev()
 {
     did_latest_search_wrap = false;
 
+
     if (text.isEmpty())
         return {INVALID_POSITION, INVALID_POSITION};
 
