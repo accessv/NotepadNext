@@ -3,21 +3,21 @@ name: Build Notepad Next
 on:
   push:
     branches:
-      - master
+      - qt67
     tags:
       - '*'
   pull_request:
 
 env:
-  QT_RELEASE_VER: 6.5
+  QT_RELEASE_VER: 6.7
 
 jobs:
   build:
     strategy:
       fail-fast: false
       matrix:
-        os: [ubuntu-latest, windows-latest, macos-latest]
-        qt_version: ["5.15", "6.5", "6.7"]
+        os: [macos-latest]
+        qt_version: ["6.7"]
         exclude:
         - os: macos-latest
           qt_version: "5.15"
